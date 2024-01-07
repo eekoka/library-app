@@ -5,21 +5,23 @@
 
 body {
   font-size: 18px;
+  display: grid;
+  justify-content: center;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 1px auto;
+  grid-template-columns: 1fr;
   height: 100vh;
+  width: max(100px, 60vw);
   text-align: center;
   justify-content: center;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: max(800px, 80vw);
-  background-color: green;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 #header-left {
